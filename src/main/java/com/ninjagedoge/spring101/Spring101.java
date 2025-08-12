@@ -11,5 +11,12 @@ public class Spring101 {
 
         MyComponent myComponent = context.getBean(MyComponent.class);
         myComponent.sayHello();
+
+        // Lazy bean instantiation example
+        Consumer consumer = context.getBean(Consumer.class);
+
+        System.out.println("Calling consumer.doWork()...");
+        consumer.doWork();
+
     }
 }
